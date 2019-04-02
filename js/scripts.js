@@ -10,10 +10,12 @@ $(function() {
       console.log("groceries", groceries);
     });
 
+    groceryList = groceryList.sort();
+
     console.log("groceryList", groceryList);
 
     groceryList.forEach(function(grocery) {
-      var newGrocery = $(".groceries-display").append("<li>" + groceryList.charAt(0).toUpperCase() + groceryList.slice(1) + "</li>").val();
+      var newGrocery = $(".groceries-display").append("<li>" + (groceryList.charAt(0).toUpperCase() + groceryList.slice(1) + "</li>").val());
       newGrocery.sort();
     });
     console.log("newGrocery", newGrocery);
