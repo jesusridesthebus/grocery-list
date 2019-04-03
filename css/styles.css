@@ -1,0 +1,20 @@
+body {
+  background-color: rgb(78, 114, 121);
+  color: rgb(183, 235, 235);
+}
+
+.btn-dark {
+  background-color: rgb(183, 235, 235);
+  color: rgb(78, 114, 121);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container {
+  width: 400px;
+}
+
+h1 {
+  text-align: center;
+}

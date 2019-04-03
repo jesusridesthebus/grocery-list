@@ -10,7 +10,6 @@ $(function() {
     });
 
     groceryList = groceryList.sort();
-    console.log("groceryList", groceryList);
 
     groceryList.forEach(function(grocery) {
       $(".groceries-display").append("<li>" + grocery.charAt(0).toUpperCase() + grocery.slice(1) + "</li>").val();
