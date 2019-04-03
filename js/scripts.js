@@ -5,35 +5,36 @@ $(function() {
     var groceryList = [];
 
     groceries.forEach(function(grocery) {
-      var item = $("input#" + grocery).val();
-      groceryList.push(item);
-      console.log("groceries", groceries);
+      var groceryInput = $("input#" + grocery).val();
+      groceryList.push(groceryInput);
     });
 
     groceryList = groceryList.sort();
-
     console.log("groceryList", groceryList);
 
     groceryList.forEach(function(grocery) {
-      var newGrocery = $(".groceries-display").append("<li>" + (groceryList.charAt(0).toUpperCase() + groceryList.slice(1) + "</li>").val());
-      newGrocery.sort();
+      $(".groceries-display").append("<li>" + grocery.charAt(0).toUpperCase() + grocery.slice(1) + "</li>").val();
     });
-    console.log("newGrocery", newGrocery);
-
   });
 });
 
 // $(function() {
 //   $("#grocery-form").submit(function(event) {
 //     var groceries = ["item1", "item2", "item3", "item4", "item5"];
-//     console.log("1", groceries);
-//
+//     var groceryList = [];
+
 //     groceries.forEach(function(grocery) {
 //       var groceryInput = $("input#" + grocery).val();
-//       $(".groceries-display").append("<li>" + groceryInput.charAt(0).toUpperCase() + groceryInput.slice(1) + "</li>").val();
-//
-//       console.log("2", groceryInput);
+//       groceryList.push(groceryInput);
+//       event.preventDefault();
 //     });
-//     event.preventDefault();
+
+//     groceryList = groceryList.sort();
+//     console.log("groceryList", groceryList);
+
+//     groceryList.forEach(function(grocery) {
+//       $(".groceries-display").append("<li>" + grocery.charAt(0).toUpperCase() + grocery.slice(1) + "</li>").val();
+//       event.preventDefault();
+//     });
 //   });
 // });
